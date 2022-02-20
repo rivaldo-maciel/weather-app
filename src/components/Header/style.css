@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+header p {
+  color: #0f4571;
+  font-weight: bold;
+  font-size: 30px;
+}

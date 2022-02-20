@@ -1,0 +1,23 @@
+.infos-container {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.humidity-container, .weather-container, .day-night-container, .wind-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+}
+
+.weather-container p {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.wind-container p {
+  font-size: 14px;
+}
