@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import './style.css';
-import { Card, StormIcon, DropIcon, UmbrellaIcon, NightIcon, WindIcon } from './style.js';
+import { Card, DropIcon, UmbrellaIcon, NightIcon, WindIcon } from './style.js';
 import weatherContext from '../../context/weatherContext';
+import getWeatherIcon from '../../services/getWeatherIcon';
 
 function CardWeather() {
-  const { currentInfos: { weather, humidity, dayNight, windSpeed }} = useContext(weatherContext);
+  const { currentInfos: { weather, humidity, dayNight, windSpeed, condition }} = useContext(weatherContext);
 
   return (
       <Card>
-          <StormIcon />
+          {
+            getWeatherIcon(condition)
+          }
           <div className='infos-container'>
             <div className='weather-container'>
               <UmbrellaIcon />

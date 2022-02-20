@@ -12,8 +12,8 @@ function WeatherProvider({ children }) {
   useEffect(() => {
     const semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"]
     const d = new Date();
-    const currDate = d.getDay(); 
-    console.log(d);
+    const currDate = `${semana[d.getDay()]}, ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}` 
+    setDate(currDate);
   }, []);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function WeatherProvider({ children }) {
   }, [weatherInfos]);
 
   return (
-    <weatherContext.Provider value={ { weatherInfos, currentInfos, weeklyWeather } }>
+    <weatherContext.Provider value={ { weatherInfos, currentInfos, weeklyWeather, date } }>
       { children }
     </weatherContext.Provider>
   );

@@ -1,5 +1,5 @@
 .infos-container {
-  width: 130px;
+  width: 180px;
   height: 130px;
   display: flex;
   flex-direction: column;
@@ -13,9 +13,12 @@
   width: 90px;
 }
 
+.weather-container {
+  width: 120px;
+}
+
 .weather-container p {
-  font-size: 14px;
-  margin-top: 4px;
+  font-size: 12px;
 }
 
 .wind-container p {
