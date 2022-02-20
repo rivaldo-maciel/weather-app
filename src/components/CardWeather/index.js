@@ -5,13 +5,16 @@ import weatherContext from '../../context/weatherContext';
 import getWeatherIcon from '../../services/getWeatherIcon';
 
 function CardWeather() {
-  const { currentInfos: { weather, humidity, dayNight, windSpeed, condition }} = useContext(weatherContext);
+  const { currentInfos: { weather, humidity, dayNight, windSpeed, condition, temp }} = useContext(weatherContext);
 
   return (
       <Card>
+        <div>
           {
             getWeatherIcon(condition)
           }
+          <p className='temperature'>{`${temp} C°`}</p>
+        </div>
           <div className='infos-container'>
             <div className='weather-container'>
               <UmbrellaIcon />

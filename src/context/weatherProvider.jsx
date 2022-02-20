@@ -40,12 +40,13 @@ function WeatherProvider({ children }) {
       description: weather,
       wind_speedy: windSpeed,
       humidity,
+      temp,
     } = weatherInfos;
-    setCurrentInfos({ cityName, condition, dayNight, weather, windSpeed, humidity })
+    setCurrentInfos({ cityName, condition, dayNight, weather, windSpeed, humidity, temp })
   }, [weatherInfos]);
 
   return (
-    <weatherContext.Provider value={ { weatherInfos, currentInfos, weeklyWeather, date } }>
+    <weatherContext.Provider value={ { weatherInfos, currentInfos, weeklyWeather, date, setWeatherInfos } }>
       { children }
     </weatherContext.Provider>
   );
