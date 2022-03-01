@@ -26,7 +26,7 @@ function WeatherProvider({ children }) {
 
   useEffect(() => {
       const { latitude, longitude } = coords;
-      const endpoint = `https://api.hgbrasil.com/weather?format=json-cors&key=6f7078c3&lat=${latitude}&lon=${longitude}&user_ip=remote`
+      const endpoint = `https://api.hgbrasil.com/weather?format=json-cors&key=658c3992c3&lat=${latitude}&lon=${longitude}&user_ip=remote`
       getWeatherAPI(endpoint).then((infos) => setWeatherInfos(infos));
       
   }, [coords]);

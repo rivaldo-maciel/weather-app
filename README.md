@@ -1,8 +1,12 @@
 # Weather App
 
+### Resolução
+
+Esta aplicação foi feita utilizando a resolução 375x667 pxs.
+
 ### Este aplicativo tem como funções:
 
--- Mostrar a previsão do tempo de a cordo com a sua localização;
+-- Mostrar a previsão do tempo de acordo com a sua localização;
 
 -- Opção de pesquisa por cidade;
 
